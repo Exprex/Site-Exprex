@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+}
+
+.header {
+  background-color: #e3f2fd;
+  padding: 1rem;
+}
+
+.logo {
+  max-width: 260px;
+  height: auto;
+}
+
+.main-content {
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #1a237e;
+  margin-bottom: 0.5rem;
+}
+
+.subtext {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.button-group button {
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+  background-color: #1976d2;
+}
+
+.logout {
+  background-color: #f44336;
+}
+
+.logout:hover {
+  background-color: #d32f2f;
+}
+
+@media (min-width: 600px) {
+  .button-group {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .button-group button {
+    flex: 1 1 150px;
+    max-width: 200px;
+  }
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ExPrex - Projetos de Extensão</title>
+    <link rel="stylesheet" href="styleadm.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img class="logo" src="img/group.png" alt="Logo ExPrex" />
+      <div class="admin-actions">
+        <button
+          class="admin-button"
+          onclick="window.location.href='inicial.html'"
+        >
+          Painel do Administrador
+        </button>
+        <button class="logout-button" onclick="logout()">Sair</button>
+      </div>
+    </header>
+
+    <div class="desktop">
+      <main class="main-content">
+        <h1 class="page-title">Oportunidades de Extensão</h1>
+        <section class="search-section">
+          <form class="search-form" role="search">
+            <div class="search-bar">
+              <label for="search-input" class="visually-hidden"
+                >Pesquisar projetos</label
+              >
+              <input
+                type="search"
+                id="search-input"
+                class="search-input"
+                placeholder="Pesquisar"
+              />
+              <button type="submit" class="search-button">
+                <img
+                  src="img/search.png"
+                  alt="Ícone de pesquisa"
+                  class="search-icon"
+                />
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <section class="projects-grid">
+          <!-- card 1 -->
+          <article class="project-card">
+            <h2 class="project-title">Capacitação em Inovação Social</h2>
+            <p class="project-advisor">Orientador: Luana Silva</p>
+            <div class="project-tags">
+              <span class="tag">Sociedade</span>
+              <span class="tag">Gestão</span>
+            </div>
+            <div class="project-location">
+              <img
+                src="img/location_on.png"
+                alt="Ícone de localização"
+                class="location-icon"
+              />
+              <span>Campus Sobral</span>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="project-link">Ver mais</a>
+              <div class="action-buttons">
+                <button class="edit-button">Editar</button>
+                <button class="delete-button">Excluir</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- card2 -->
+          <article class="project-card">
+            <h2 class="project-title">
+              Ciclo de Palestras em Engenharia de Produção
+            </h2>
+            <p class="project-advisor">Orientador: Roberto Menezes</p>
+            <div class="project-tags">
+              <span class="tag">Engenharia</span>
+              <span class="tag">Produção</span>
+            </div>
+            <div class="project-location">
+              <img
+                src="img/location_on.png"
+                alt="Ícone de localização"
+                class="location-icon"
+              />
+              <span>DEPRO - Campus do Pici</span>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="project-link">Ver mais</a>
+              <div class="action-buttons">
+                <button class="edit-button">Editar</button>
+                <button class="delete-button">Excluir</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- card3 -->
+          <article class="project-card">
+            <h2 class="project-title">Feira de Extensão e Cultura Popular</h2>
+            <p class="project-advisor">Orientador: Joana Farias</p>
+            <div class="project-tags">
+              <span class="tag">Cultura</span>
+              <span class="tag">Feira</span>
+            </div>
+            <div class="project-location">
+              <img
+                src="img/location_on.png"
+                alt="Ícone de localização"
+                class="location-icon"
+              />
+              <span>Reitoria UFC</span>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="project-link">Ver mais</a>
+              <div class="action-buttons">
+                <button class="edit-button">Editar</button>
+                <button class="delete-button">Excluir</button>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <!-- modal de projeto -->
+    <div id="project-modal" class="modal hidden">
+      <div class="modal-content">
+        <button id="close-modal" class="close-button">×</button>
+        <h1 class="modal-title">Título da Ação de Extensão</h1>
+        <p><strong>Orientador:</strong> Nome do Orientador</p>
+        <p><strong>Data de publicação:</strong> 00/00/0000</p>
+        <p><strong>Inscrições até:</strong> 00/00/0000</p>
+        <p><strong>Localização:</strong> Endereço completo</p>
+
+        <div class="modal-columns">
+          <div class="modal-box">
+            <h2>Vagas Remuneradas</h2>
+            <p>Texto</p>
+          </div>
+          <div class="modal-box">
+            <h2>Vagas Voluntárias</h2>
+            <p>Texto</p>
+          </div>
+          <div class="modal-box">
+            <h2>Período de Atuação</h2>
+            <p>Texto</p>
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h2>Descrição</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+
+        <div class="modal-section">
+          <h2>Cursos Contemplados</h2>
+          <p>Texto</p>
+        </div>
+
+        <div class="modal-section">
+          <h2>Contato</h2>
+          <p>Texto</p>
+        </div>
+
+        <button class="download-button">Baixar Edital</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      function logout() {
+        localStorage.removeItem("logado");
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>

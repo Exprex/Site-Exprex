@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu ExPrex</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img class="logo" src="img/group.png" alt="Logo ExPrex" />
+    </header>
+
+    <main class="main-content">
+      <div class="button-group">
+        <button class="menu-button" id="btn-pagina-inicial">
+          Página Inicial
+        </button>
+        <button class="menu-button" id="btn-cadastrar">Cadastrar</button>
+        <button class="menu-button" id="btn-publicar-edital">
+          Publicar Edital
+        </button>
+        <button class="menu-button" id="btn-sair">Sair</button>
+      </div>
+    </main>
+
+    <script>
+      document
+        .getElementById("btn-cadastrar")
+        .addEventListener("click", function () {
+          window.location.href = "login.html";
+        });
+
+      document
+        .getElementById("btn-pagina-inicial")
+        .addEventListener("click", function () {
+          window.location.href = "admlogin.html";
+        });
+
+      document
+        .getElementById("btn-publicar-edital")
+        .addEventListener("click", function () {
+          window.location.href = "publicar.html";
+        });
+
+      document
+        .getElementById("btn-sair")
+        .addEventListener("click", function () {
+          window.location.href = "index.html";
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ExPrex - Projetos de Extensão</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img class="logo" src="img/group.png" alt="Logo ExPrex" />
+      <button class="admin-button" id="open-admin-login">
+        Entrar como administrador
+      </button>
+    </header>
+
+    <div class="desktop">
+      <main class="main-content">
+        <h1 class="page-title">Oportunidades de Extensão</h1>
+        <section class="search-section">
+          <form class="search-form" role="search">
+            <div class="search-bar">
+              <label for="search-input" class="visually-hidden"
+                >Pesquisar projetos</label
+              >
+              <input
+                type="search"
+                id="search-input"
+                class="search-input"
+                placeholder="Pesquisar"
+              />
+              <button type="submit" class="search-button">
+                <img
+                  src="img/search.png"
+                  alt="Ícone de pesquisa"
+                  class="search-icon"
+                />
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <section class="projects-grid">
+          <article class="project-card">
+            <h2 class="project-title">Capacitação em Inovação Social</h2>
+            <p class="project-advisor">Orientador: Luana Silva</p>
+            <div class="project-tags">
+              <span class="tag">Sociedade</span>
+              <span class="tag">Gestão</span>
+            </div>
+            <div class="project-footer">
+              <div class="project-location">
+                <img
+                  src="img/location_on.png"
+                  alt="Ícone de localização"
+                  class="location-icon"
+                />
+                <span>Campus Sobral</span>
+              </div>
+              <a href="#" class="project-link">Ver mais</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h2 class="project-title">
+              Ciclo de Palestras em Engenharia de Produção
+            </h2>
+            <p class="project-advisor">Orientador: Roberto Menezes</p>
+            <div class="project-tags">
+              <span class="tag">Engenharia</span>
+              <span class="tag">Produção</span>
+            </div>
+            <div class="project-footer">
+              <div class="project-location">
+                <img
+                  src="img/location_on.png"
+                  alt="Ícone de localização"
+                  class="location-icon"
+                />
+                <span>DEPRO - Campus do Pici</span>
+              </div>
+              <a href="#" class="project-link">Ver mais</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h2 class="project-title">Feira de Extensão e Cultura Popular</h2>
+            <p class="project-advisor">Orientador: Joana Farias</p>
+            <div class="project-tags">
+              <span class="tag">Cultura</span>
+              <span class="tag">Feira</span>
+            </div>
+            <div class="project-footer">
+              <div class="project-location">
+                <img
+                  src="img/location_on.png"
+                  alt="Ícone de localização"
+                  class="location-icon"
+                />
+                <span>Reitoria UFC</span>
+              </div>
+              <a href="#" class="project-link">Ver mais</a>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <!-- modal de projeto -->
+    <div id="project-modal" class="modal hidden">
+      <div class="modal-content">
+        <button id="close-modal" class="close-button">×</button>
+
+        <h1 class="modal-title">Título da Ação de Extensão</h1>
+
+        <p><strong>Orientador:</strong> Nome do Orientador</p>
+        <p><strong>Data de publicação:</strong> 00/00/0000</p>
+        <p><strong>Inscrições até:</strong> 00/00/0000</p>
+        <p><strong>Localização:</strong> Endereço completo</p>
+
+        <div class="modal-columns">
+          <div class="modal-box">
+            <h2>Vagas Remuneradas</h2>
+            <p>Texto</p>
+          </div>
+          <div class="modal-box">
+            <h2>Vagas Voluntárias</h2>
+            <p>Texto</p>
+          </div>
+          <div class="modal-box">
+            <h2>Período de Atuação</h2>
+            <p>Texto</p>
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h2>Descrição</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+            rutrum erat nibh, in ornare nunc laoreet id. Suspendisse id finibus
+            lectus...
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <h2>Cursos Contemplados</h2>
+          <p>Texto</p>
+        </div>
+
+        <div class="modal-section">
+          <h2>Contato</h2>
+          <p>Texto</p>
+        </div>
+
+        <button class="download-button">Baixar Edital</button>
+      </div>
+    </div>
+
+    <!-- modal de ogin do adm -->
+    <div id="admin-login-modal" class="admin-modal hidden">
+      <div class="admin-content">
+        <button class="close-button" onclick="closeAdminModal()">×</button>
+        <h2 class="admin-title">Portal do Administrador</h2>
+        <form class="admin-form" id="admin-login-form">
+          <label>Login</label>
+          <input type="email" placeholder="exemplo@gmail.com" required />
+          <label>Senha</label>
+          <input type="password" required />
+          <small><a href="#">Esqueceu sua senha?</a></small>
+          <button type="submit">Entrar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- modal de cadastro do Adm -->
+    <div id="admin-register-modal" class="admin-modal hidden">
+      <div class="admin-content">
+        <button class="close-button" onclick="closeAdminModal()">×</button>
+        <h2 class="admin-title">Cadastro de Administrador</h2>
+        <form class="admin-form" onsubmit="event.preventDefault()">
+          <input type="text" placeholder="Nome completo *" required />
+          <input type="email" placeholder="Email *" required />
+          <input type="date" required />
+          <input type="password" placeholder="Crie sua senha *" required />
+          <input type="password" placeholder="Repita sua senha *" required />
+          <input type="tel" placeholder="Telefone *" required />
+          <input type="text" placeholder="CPF *" required />
+          <button type="submit">Criar conta</button>
+          <div class="admin-switch">
+            Já tem uma conta? <a onclick="switchToLogin()">Entrar</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
